@@ -1,0 +1,69 @@
+extends base/pageLayout
+
+include ./pugsComponent/select_list
+include ./pugsComponent/note
+
+block head 
+	script(src='/javascripts/coreObj/bootstrapModal.js')
+	script(src='/javascripts/coreObj/selectableList.js')
+	script(src='/javascripts/dmMatchObj.js')
+
+
+
+block pageSidebar
+	label #{dictionary.divisions}
+	div.divisionList
+		+searchableSelectableList(divisionsList, 5)
+	label(style="margin-top: 20px;") #{dictionary.markets}
+	div.marketList
+		+searchableSelectableList(marketsList, 5)
+	div(style="margin-top: 20px;")
+		button.btn.btn-sm.btn-success.btnShowResult(style="width: 100%;") Visualizza
+
+
+block content
+	.pageTitleContainer
+		h1.pageTitle= title
+		.infoBtn
+			span.glyphicon.glyphicon-question-sign
+	+customNoteNew(notes)
+
+	.searchContainer(style="display: none;")
+		h4.itemSelected
+			a(href="#") IT-CARDIO - Mercato Cardio
+		.row.info-group-products
+			.col-sm-6.products-in-group
+				label #{dictionary.macroGroups} nell'assoc.
+				.macrogroup-in-assoc-list
+					+searchableSelectableList(macroGroupListinASS, 7)
+
+				.action-buttons
+					button.searchable-list_btn.btn.btn-sm.btn-default
+						i.glyphicon.glyphicon-trash("aria-hidden"="true")
+						= " Elimina "
+						= dictionary.macroGroups
+
+			.col-sm-6.search-product
+				label #{dictionary.macroGroups} disponibili
+				.search-macrogroup-list
+					+searchableSelectableList(macroGroupList, 7)
+
+				.action-buttons
+					button.searchable-list_btn.btn.btn-sm.btn-default
+						i.glyphicon.glyphicon-plus("aria-hidden"="true")
+						= " "
+						= dictionary.add
+						= " "
+						= dictionary.macroGroups
+
+		div.row.action-button-group
+			div.col-xs-12.text-right
+				button.btn.btn-sm.btn-danger.removeAssoc
+					span.glyphicon.glyphicon-remove
+					| 
+					=dictionary.deleteAssoc
+				| 
+				button.btn.btn-sm.btn-success.saveAssoc
+					span.glyphicon.glyphicon-floppy-disk
+					| 
+					=dictionary.save

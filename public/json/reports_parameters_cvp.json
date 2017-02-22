@@ -1,0 +1,380 @@
+{
+	"header": [
+		{
+			"columns":[
+				{
+					"attributes": {"rel": "divisions"}, "content": {"value": "Divisioni"}	},
+				{
+					"attributes": {"rel": "info"}, "content": {"value": "Info"}},
+				{
+					"attributes": {"rel": "year"}, "content": {"value": "Anno"}},
+				{
+					"attributes": {"rel": "month"}, "content": {"value": "Mese"}},
+				{
+					"attributes": {"rel": "published", "class": "btn-group-container"}, "content": {"value": "Pubblicato"}},
+				{
+					"attributes": {"rel": "flag_ims","class": "btn-group-container"}, "content": {"value": "Flag IMS"}},
+				{
+					"attributes": {"rel": "elaborate"}, "content": {"value": "Elabora"}},
+				{
+					"attributes": {"rel": "preview"}, "content": {"value": "Azioni"}}
+			]
+		}
+	],
+	"data": [
+		{
+			"attributes": {"id": 0, "class": "align-middle"},
+			"columns": [
+				{"attributes": {"rowspan":2, "class": "text-center", "style":{"vertical-align": "middle"}}, "content": {"value": "IT-ACCMAN"}}, 
+				{"content": {"value": "26/03/2010 09:56:30"}}, 
+				{"content": {"value": "2010"}},
+				{"content": {"value": "1"}},
+				{	
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"value": "si", "text": "Si"},
+							{"attributes": {"class":"active"}, "value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "checkbox",
+						"value": ""
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "preview"}}
+						]
+					}
+				}
+
+			]
+		},
+		{
+			"attributes": {"id": 0, "class": "align-middle"},
+			"columns": [
+				{"content": {"value": "10/02/2017 09:55:39"}}, 
+				{"content": {"value": "2013"}},
+				{"content": {"value": "11"}},
+				{	
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "checkbox",
+						"value": ""
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "preview"}}
+						]
+					}
+				}
+
+			]
+		},
+
+
+
+		{
+			"attributes": {"id": 1, "class": "align-middle"},
+			"columns": [
+				{"attributes": {"rowspan":2, "class": "text-center", "style":{"vertical-align": "middle"}}, "content": {"value": "IT-BANTING 2011"}}, 
+				{"content": {"value": "14/01/2011 12:37:45"}}, 
+				{"content": {"value": "2010"}},
+				{"content": {"value": "11"}},
+				{	
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"value": "si", "text": "Si"},
+							{"attributes": {"class":"active"}, "value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "checkbox",
+						"value": ""
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "preview"}}
+						]
+					}
+				}
+
+			]
+		},
+		{
+			"attributes": {"id": 1, "class": "align-middle"},
+			"columns": [
+				{"content": {"value": "28/01/2011 18:46:43"}}, 
+				{"content": {"value": "2010"}},
+				{"content": {"value": "11"}},
+				{	
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "checkbox",
+						"value": ""
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "preview"}}
+						]
+					}
+				}
+			]
+		},
+
+
+		
+		{
+			"attributes": {"id": 1, "class": "align-middle"},
+			"columns": [
+				{"attributes": {"rowspan":2, "class": "text-center", "style":{"vertical-align": "middle"}}, "content": {"value": "IT-BEST-2011"}}, 
+				{"content": {"value": "13/01/2011 16:27:24"}}, 
+				{"content": {"value": "2010"}},
+				{"content": {"value": "11"}},
+				{	
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"value": "si", "text": "Si"},
+							{"attributes": {"class":"active"}, "value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "checkbox",
+						"value": ""
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "preview"}}
+						]
+					}
+				}
+
+			]
+		},
+		{
+			"attributes": {"id": 1, "class": "align-middle"},
+			"columns": [
+				{"content": {"value": "28/01/2011 18:46:43"}}, 
+				{"content": {"value": "2010"}},
+				{"content": {"value": "11"}},
+				{	
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"value": "si", "text": "Si"},
+							{"attributes": {"class":"active"}, "value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "checkbox",
+						"value": ""
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "preview"}}
+						]
+					}
+				}
+			]
+		},
+
+
+
+		{
+			"attributes": {"id": 1, "class": "align-middle"},
+			"columns": [
+				{"attributes": {"rowspan":2, "class": "text-center", "style":{"vertical-align": "middle"}}, "content": {"value": "IT-BONE"}}, 
+				{"content": {"value": "05/11/2013 10:40:42"}}, 
+				{"content": {"value": "2013"}},
+				{"content": {"value": "9"}},
+				{	
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"value": "si", "text": "Si"},
+							{"attributes": {"class":"active"}, "value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "checkbox",
+						"value": ""
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "preview"}}
+						]
+					}
+				}
+
+			]
+		},
+		{
+			"attributes": {"id": 1, "class": "align-middle"},
+			"columns": [
+				{"content": {"value": "29/11/2013 11:26:32"}}, 
+				{"content": {"value": "2013"}},
+				{"content": {"value": "10"}},
+				{	
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"value": "si", "text": "Si"},
+							{"attributes": {"class":"active"}, "value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "checkbox",
+						"value": ""
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type": "button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "preview"}}
+						]
+					}
+				}
+			]
+		}
+	]
+}

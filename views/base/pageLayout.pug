@@ -1,0 +1,46 @@
+include ../pugsComponent/bootstrap-modal.pug
+include ../pugsComponent/sidebar.pug
+include ../pugsComponent/header.pug
+
+doctype html 
+html(xmlns="http://www.w3.org/1999/xhtml")
+	head
+		title= title
+		link(rel='stylesheet', href='/font-awesome-4.7.0/css/font-awesome.css')
+		link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.custom.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/customSidebar.css')
+		link(rel="icon" href="/images/favicon.png")
+
+		script(src='/jquery/jquery-1.11.2.js')
+		script(src='/bootstrap/dist/js/bootstrap.js')
+		script(src='/javascripts/globalsObj.js')
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+		block head
+
+	body(class=(userCookie.fontSize !== undefined )?userCookie.fontSize:"")
+
+		+sidebar(sidebarConf)
+
+		//-
+			section.headerSection
+				table.table
+					tbody
+						tr
+							td.logoContainer
+								img(src= (siteURL + "./images/Eli_Lilly_logo.png"))
+							td.text-right
+								span Francesco Russo
+								br
+								span.profileDescr profile
+							td.flagContainer
+		+navbar(menu)
+		div.container-fluid#pageContainer(class=((sidebarConf.isVisible)?"page_lockedSidebar":""))
+			block content
+		include ../pugsComponent/footer.pug
+		include ../pugsComponent/loader.pug
+
+		+bootstrap-modal

@@ -1,0 +1,119 @@
+//- NON UTILIZZARE QUESTO MIXIN, RIFERIMENTO
+mixin report_table(datas)
+	table.table.table-bordered.table-responsive.table-hover.table-custom
+		thead
+			tr.info
+				th.text-center("rowspan"="2") Divisioni
+				th.text-center("rowspan"="2") Mercato
+				th.text-center("colspan"="3") Ultima Elaborazione
+				th.text-center("colspan"="3") Parametri di lancio
+				th.text-center("rowspan"="2", style={}) Elaborazione
+
+			tr.info
+				th Data
+				th Anno
+				th Mese
+				th Anno
+				th Mese
+				th Opzioni
+
+		tbody
+			each data_info in datas.struct_data
+				tr
+					//- td Divisione
+					td  #{data_info.divisione}
+					//- td Mercato
+					td  #{data_info.mercato}
+					//- td data-info
+					td  #{data_info.ultima_elaborazione.data}
+					//- td Anno
+					td  #{data_info.ultima_elaborazione.anno}
+					//- td Mese
+					td  #{data_info.ultima_elaborazione.mese}
+					//- td Anno
+					td  #{data_info.ultima_elaborazione.anno}
+					//- td Mese
+					td  01
+					//- td Opzioni
+					td null
+					//- td Azioni
+					td
+						- if(datas.options.isPreviewable)
+							i.fa.fa-2x.fa-cloud-upload.pull-right("aria-hidden"="true")
+						- if(datas.options.isEditable)
+							i.fa.fa-2x.fa-pencil-square-o.pull-right("aria-hidden"="true")
+
+
+mixin genericDataTable(struct)
+	table.table.table-bordered.table-responsive.table-stripped.table-custom
+		- if(struct.header!=undefined)
+			thead
+				each row in struct.header
+					+tableRow(row, true)
+		- if(struct.data!=undefined)
+			tbody
+				each row in struct.data
+					+tableRow(row, false)
+
+
+mixin cellContent(content)
+	case (content.type||'text')
+		when 'text'
+			= content.value
+		when 'button'
+			-var attributes = content.attributes
+			button.btn.btn-sm.btn-default&attributes(attributes) 
+				-if(content.icon)
+					-var attributes = content.icon.attributes||{}
+					-if(content.icon.type=="glyphicon")
+						span.glyphicon&attributes(attributes)
+					-else
+						i.fa&attributes(attributes)
+				= content.text
+		when 'checkbox'
+			input("type"="checkbox")
+		when 'button-icon-group'
+			each icon in content.elements
+				-var attributes = icon.attributes
+				i&attributes(attributes)
+		when 'radio'
+			each radio, index in content.elements
+				-var attributes = radio.attributes
+				input(
+					"value"= radio.value,
+					"type"="radio"
+				)&attributes(attributes)
+				label  #{radio.label}
+
+		when 'input-group'
+			-var attributes = content.attributes
+			.input-group
+				input(value=content.value)&attributes(attributes)
+				-var attributes = content["input-group-icon"].attributes
+				span(class="input-group-addon")&attributes(attributes)
+
+		when 'button-group'
+			.btn-group("role"="group")
+				each button, index in content.elements
+					-var attributes = button.attributes
+					button.btn.btn-xs.btn-default&attributes(attributes) #{button.text}
+		when 'input-text'
+			-var attributes = content.attributes
+			input&attributes(attributes)("type"="text", value=content.value)
+
+			
+
+mixin tableRow(row, isHead)
+	-var attributes = row.attributes;
+	tr(
+		class=(isHead)?"success":""
+	)&attributes(attributes)
+		each cols, index in row.columns
+			-var attributes = cols.attributes
+			-if(isHead){
+				th&attributes(attributes)
+					+cellContent(cols.content)
+			-}else{
+				td&attributes(attributes)
+					+cellContent(cols.content)
+			-}

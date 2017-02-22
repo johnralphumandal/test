@@ -1,0 +1,58 @@
+extends base/pageLayout
+include ./pugsComponent/select_list
+include ./pugsComponent/report_table
+include ./pugsComponent/note
+
+block head
+	script.
+		divisionsList='#{divisionsList}'
+
+	script(src='/javascripts/coreObj/bootstrapModal.js')
+	//- script(src='/javascripts/coreObj/searchProduct.js')
+	script(src='/javascripts/coreObj/selectableList.js')
+	script(src='/javascripts/productsContributionObj.js')
+
+	link("rel"="stylesheet", "href"="/stylesheets/products.css")
+	link("rel"="stylesheet", "href"="/stylesheets/report-table.css")
+
+block pageSidebar
+	.group-list
+		label #{dictionary.level_3_products}
+		+searchableSelectableList(product_list, 9)
+		
+		div(style="margin-top: 20px;")
+			button.btn.btn-sm.btn-success.btnShowResult(style="width: 100%;") Visualizza
+			
+block content
+	.pageTitleContainer
+		h1.pageTitle= title
+		.infoBtn
+			span.glyphicon.glyphicon-question-sign
+	+customNoteNew(notes)
+
+
+	.searchContainer(style="display: none;")
+		h4.itemSelected
+			a(href="#")
+
+		.row
+			//-
+				.col-sm-3.group-list
+					label #{dictionary.level_3_products}
+					+searchableSelectableList(group_list, 7)
+			.col-sm-12
+				.row
+					.col-xs-12
+						+genericDataTable(product_contribution)
+				.row
+					.col-xs-12.action-button-group.text-right
+						button#btnCreateAssoc.btn.btn-sm.btn-default
+							i.glyphicon.glyphicon-plus("aria-hidden"="true")
+							|  #{dictionary.add} #{dictionary.association}
+						//-
+							button.btn.btn-danger.btn-sm 
+								span.glyphicon.glyphicon-remove 
+								|  #{dictionary.delete} #{dictionary.association}
+						button#btnSaveModification.btn.btn-success.btn-sm 
+							span.glyphicon.glyphicon-floppy-disk
+							|  #{dictionary.save}

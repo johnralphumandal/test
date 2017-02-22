@@ -1,0 +1,118 @@
+{
+	"header": [
+		{
+			"columns":[
+				{
+					"attributes": {"rel": "divisions"}, "content": {"value": "Divisione"}	
+				},
+				{
+					"attributes": {"rel": "contribution_value", "class": "text-center", "style": {"width":"110px"}}, "content": {"value": "Valore (%)"}
+				},
+				{
+					"attributes": {"rel": "actions", "style": {}, "class": "btn-group-container"}, "content": {"value": ""}
+				}
+			]
+		}
+	],
+	"data": [
+		{
+			"attributes": {"id": 0, "class": "align-middle"},
+			"columns": [
+				{"attributes": {"class": "", "style":{"vertical-align": "middle"}}, "content": {"value": "IT-ACCMAN"}}, 
+				{
+					"attributes": {"class": "text-center", "style":{"vertical-align": "middle"}}, 
+					"content": {
+						"attributes":{
+							"class":"form-control input-sm", 
+							"style":{
+								"width":"100%", "text-align": "center"
+							},
+							"type": "text",
+							"value": "100"
+						},
+						"type":"input-group",
+						"input-group-icon": {"attributes":{"class": "glyphicon glyphicon-pencil"}}
+					}
+				}, 
+				{
+					"attributes": {"class": "text-center", "style":{"vertical-align": "middle"}},
+					"content": {
+						"attributes": {"class": "btn-danger btnDeleteAssoc"},
+						"type":"button",
+						"icon": { "type": "glyphicon", "attributes":{"class":"glyphicon-trash"}},
+						"text": ""
+					}
+				}
+			]
+		},
+		{
+			"attributes": {"id": 0, "class": "align-middle"},
+			"columns": [
+				{"attributes": {"class": "", "style":{"vertical-align": "middle"}}, "content": {"value": "IT-CARDIOLOGY"}}, 
+				{
+					"attributes": {"class": "text-center", "style":{"vertical-align": "middle"}}, 
+					"content": {
+						"attributes":{
+							"class":"form-control input-sm", 
+							"style":{
+								"width":"100%", "text-align": "center"
+							},
+							"type": "text",
+							"value": "22"
+						},
+						"type":"input-group",
+						"input-group-icon": {
+							"attributes":{
+								"class": "glyphicon glyphicon-pencil"
+							}
+						}
+					}
+				}, 
+				{
+					"attributes": {"class": "text-center", "style":{"vertical-align": "middle"}},
+					"content": {
+						"attributes": {"class": "btn-danger btnDeleteAssoc"},
+						"type":"button",
+						"icon": { "type": "glyphicon", "attributes":{"class":"glyphicon-trash"}},
+						"text": ""
+					}
+				}
+			]
+		},
+		{
+			"attributes": {"id": 0, "class": "align-middle"},
+			"columns": [
+				{"attributes": {"class": "", "style":{"vertical-align": "middle"}}, "content": {"value": "IT-CNS"}}, 
+				{
+					"attributes": {"class": "text-center", "style":{"vertical-align": "middle"}}, 
+					"content": {
+						"attributes":{
+							"class":"form-control input-sm", 
+							"style":{
+								"width":"100%", "text-align": "center"
+							},
+							"type": "text",
+							"value": "87"
+						},
+						"type":"input-group",
+						
+						"input-group-icon": {
+							"attributes":{
+								"class": "glyphicon glyphicon-pencil"
+							}
+						}
+					}
+				}, 
+				{
+					"attributes": {"class": "text-center", "style":{"vertical-align": "middle"}},
+					"content": {
+						"attributes": {"class": "btn-danger btnDeleteAssoc"},
+						"type":"button",
+						"icon": { "type": "glyphicon", "attributes":{"class":"glyphicon-trash"}},
+						"text": ""
+					}
+				}
+			]
+		}
+	]
+}

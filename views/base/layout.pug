@@ -1,0 +1,20 @@
+include ../pugsComponent/bootstrap-modal.pug
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='/jquery/jquery-1.11.2.js')
+		script(src='/bootstrap/dist/js/bootstrap.js')
+		script(src='/javascripts/coreObj/bootstrapModal.js')
+		script(src='/javascripts/globalsObj.js')
+		script(src='/javascripts/loginObj.js')
+	body.logInBG
+
+		div.container
+			block content
+		include ../pugsComponent/footer.pug
+		include ../pugsComponent/loader.pug
+
+		+bootstrap-modal

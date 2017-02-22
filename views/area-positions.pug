@@ -1,0 +1,226 @@
+extends base/pageLayout
+include ./pugsComponent/select_list
+include ./pugsComponent/note
+
+block head 
+	script(src='/javascripts/coreObj/bootstrapModal.js')
+	script(src='/javascripts/coreObj/selectableList.js')
+	script(src='/javascripts/coreObj/bAlert.js')
+	script(src='/javascripts/area-positionObj.js')
+	link(rel='stylesheet', href='/stylesheets/area-position.css')
+
+block pageSidebar
+	div.division-list.filter-container
+		label.text-bold #{dictionary.division}
+		+searchableSelectableList(params.division_list,5)
+	div.user-list.user-container-filter.margin-top.filter-container
+		label.text-bold Utenti
+		+searchableSelectableList(params.user_list, 5)
+	div.type-list.account-container-filter.margin-top.filter-container
+		label.text-bold Tipo
+		.btn-group.btn-group-justified(role="group", "aria-label"="true" style="margin-bottom: 10px;")
+			a.btn.btn-sm.btn-default.active( "role"="button" rel="account-account-list-container-filter") Account
+			a.btn.btn-sm.btn-default( "role"="button" rel="account-sales-rapresentative-list-container") Sales Rapresentative
+		div#account-account-list-container-filter.tabs-cont
+			+searchableSelectableList(params.account,5)
+		div#account-sales-rapresentative-list-container(style="display:none").tabs-cont
+			+searchableSelectableList(params.sales_rapresentative,5)
+	p.wrong-input-message(style="visibility:hidden")
+	div
+		button.btn.btn-sm.btn-success.btn-show-result(style="width: 100%;") #{dictionary.view}
+	
+
+block content
+	h1= title
+
+	.emptySearch
+		+customNote(notes)
+	
+	.searchContainer
+		div.row
+			div.col-sm-12
+				ul.nav.nav-tabs
+					li(role="presentation", class="active" rel="position-container-tab")
+						a(href="#") Position
+					li(role="presentation" rel="brick-container-tab")
+						a(href="#") Brick
+					li(role="presentation" rel="user-container-tab")
+						a(href="#") Utenti
+					li(role="presentation" rel="account-container-tab")
+						a(href="#") Account
+				div.tabContainer
+					div#position-container-tab
+						h4.itemSelected.text-bold
+							a(href="#")
+						div.tab-note
+							+customNote(["Scegli una divisione per iniziare"])
+						div.tab-content(style="display:none")
+							div.row(style="margin-top:10px;")
+								div.col-sm-4.col-md-4.col-lg-4
+									div.national-sales-manager-list
+										p.h5.text-bold.action-group National Sales Manager
+											button.btn.btn-success.btn-xs.pull-right(rel="national-sales-manager-container" )
+												i.fa.fa-plus("aria-hidden"="true") 
+												=" Nuovo"
+										+searchableSelectableList(params.position_list,9)
+										.action-buttons
+											button#btn_add_prod.btn.btn-sm.btn-default.searchable-list_btn
+												i.glyphicon.glyphicon-trash("aria-hidden"="true")
+												= " Elimina"
+								div.col-sm-4.col-md-4.col-lg-4
+									div.district-sales-manager-list
+										p.h5.text-bold.action-group District Sales Manager
+											button.btn.btn-success.btn-xs.pull-right(rel="district-sales-manager-container" disabled)
+												i.fa.fa-plus("aria-hidden"="true") 
+												=" Nuovo"
+										+searchableSelectableList(params.position_list,9)
+										.action-buttons
+											button#btn_add_prod.btn.btn-sm.btn-default.searchable-list_btn
+												i.glyphicon.glyphicon-trash("aria-hidden"="true")
+												= " Elimina"
+								div.col-sm-4.col-md-4.col-lg-4
+									div.sales-rapresentative-list
+										p.h5.text-bold.action-group Sales Rapresentative
+											button.btn.btn-success.btn-xs.pull-right(rel="sales-rapresentative-container" )
+												i.fa.fa-plus("aria-hidden"="true") 
+												=" Nuovo"
+										+searchableSelectableList(params.position_list,9)
+										.action-buttons
+											button#btn_add_prod.btn.btn-sm.btn-default.searchable-list_btn
+												i.glyphicon.glyphicon-trash("aria-hidden"="true")
+												= " Elimina"
+					div#brick-container-tab(style="display:none")
+						h4.itemSelected.text-bold
+							a(href="#")
+						div.tab-note
+							+customNote(["Note del tab..."])
+						div.tab-content(style="display:none")
+							div.row(style="margin-top:10px;")
+								div.col-sm-12
+									div.row
+					div#user-container-tab(style="display:none")
+						h4.itemSelected.text-bold
+							a(href="#")
+						div.tab-note
+							+customNote(["Cerca e Seleziona l'Utente'","La ricerca può essere effetuata per Nome, Cognome, ID utente o Global ID"])
+						div.tab-content(style="display:none")
+							div.row(style="margin-top:10px")
+								
+								//div.col-sm-4.col-md-6
+									p.h5.text-bold Dati Selezionati
+									div.form-group
+										label(for="input-division") Divisione
+										input(type="text" class="form-control input-sm" id="input-division" disabled placeholder="" value="IT-CCARE 2011")
+									div.form-group
+										label(for="input-global-id") Global ID
+										input(type="text" class="form-control input-sm" id="input-global-id" disabled placeholder="" value="123456789")
+								div.col-sm-12.col-md-12.col-lg-12
+									p.h5.text-bold Posizioni Associate
+									table.table-position.table.table-striped.table-condensed.table-sm
+										thead
+											tr.success
+												th Divisione
+												th Ruolo
+												th Posizione
+												th 
+										tbody
+											- for (var u = 0; u < params.user_positions.length; u++ ){
+												tr
+													td #{params.user_positions[u].division}
+													td #{params.user_positions[u].role}
+													td #{params.user_positions[u].position}
+													td.text-center.btn-remove
+														button.btn.btn-danger.btn-xs
+															span.glyphicon.glyphicon-trash
+											- }
+							div.row
+								div.col-sm-12.col-md-12.col-lg-12
+									p.h5.text-bold Posizioni Libere
+									table.table-position.table.table-striped.table-condensed.table-sm
+										thead
+											tr.success
+												th Divisione
+												th Ruolo
+												th Posizione
+												th 
+										tbody
+											- for (var u = 0; u < params.user_positions.length; u++ ){
+												tr
+													td #{params.user_positions[u].division}
+													td #{params.user_positions[u].role}
+													td #{params.user_positions[u].position}
+													td.text-center.btn-add
+														button.btn.btn-success.btn-xs
+															span.glyphicon.glyphicon-plus
+											- }
+														
+					div#account-container-tab(style="display:none")
+						h4.itemSelected.text-bold
+							a(href="#")
+						div.tab-note
+							+customNote(["Scegli Account o Sales Rapresentative"])
+						div.tab-content(style="display:none")
+							div#account-content-container
+								div.row(style="margin-top:10px")
+									//	div.form-group
+											label(for="input-division") Divisione
+											input(type="text" class="form-control input-sm" id="input-division" disabled placeholder="" value="IT-CCARE 2011")
+										div.form-group
+											label(for="input-division") Posizione
+											input(type="text" class="form-control input-sm" id="input-division" disabled placeholder="" value="123456789")
+										div.form-group
+											label(for="input-name") Nome
+											input(type="text" class="form-control input-sm" id="input-name" disabled placeholder="" value="123456789")
+									div.col-sm-12
+										p.h5.text-bold Posizioni Associate
+										table.table-position.table.table-striped.table-condensed.table-sm
+											thead
+												tr.success
+													th
+													th Posizione
+													th Nome
+													th %
+													th 
+											tbody
+												- for (var u = 0; u < params.account_positions.length; u++ ){
+													tr
+														td
+															input(type="checkbox" style="cursor:pointer;")
+														td #{params.account_positions[u].position}
+														td #{params.account_positions[u].name}
+														td #{params.account_positions[u].percent}
+														td.text-center.btn-remove
+															button.btn.btn-danger.btn-xs
+																span.glyphicon.glyphicon-trash
+												- }
+								div.row
+									div.col-sm-4.col-sm-offset-4.text-center
+										button.btn.btn-success.btn-sm.pull-right.btn-switch(disabled style="width:100%")
+											span.glyphicon.glyphicon-chevron-down
+											=" Scambia "
+											span.glyphicon.glyphicon-chevron-up
+								div.row
+									div.col-sm-12
+										p.h5.text-bold Posizioni Della Divisione
+										table.table-position.table.table-striped.table-condensed.table-sm
+											thead
+												tr.success
+													th 
+													th Posizione
+													th Nome 
+													th 
+											tbody
+												- for (var u = 0; u < params.user_positions.length; u++ ){
+													tr
+														td
+															input(type="checkbox" style="cursor:pointer;")
+														td #{params.user_positions[u].position}
+														td #{params.user_positions[u].name}
+														td.text-center.btn-add
+															button.btn.btn-success.btn-xs
+																span.glyphicon.glyphicon-plus
+												- }
+								div.row.action-button-group
+									div.col-sm-2.col-sm-offset-10
+						div#sales-rapresentative-content-container
+									-//+selectableList(params.sales_rapresentative,9)

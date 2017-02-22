@@ -1,0 +1,65 @@
+/* definizione stili pagina Prodotti>Macro Product Group - CVP*/
+.group-product{  }
+.group-product .action-group{margin-bottom: 5px; margin-top: 7px; height: 22px;}
+.group-product .action-group button:not(:last-child){ margin-left:5px; }
+
+.group-product .select-group select,
+.info-group-products select,
+.search-product select{ width: 100%; }
+
+.info-group label,
+.search-product label,
+.info-group label{ margin-bottom: 0px; }
+/*
+.info-group-products label,
+.info-group-detail label,
+.list-group label{ font-size: 8pt; }
+*/
+/* 	deprecato
+	per allineare la colonna dei prodotti nel gruppo e del filtro dei prodotti 
+*/
+/* .info-group-products .products-in-group label{ margin: 0; height: 27px; } */
+
+
+/* bottoni di azione associazione*/
+/*
+.info-group-products .products-in-group .action-buttons  button,
+.info-group-products .search-product .action-buttons button{
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-top-style: none;	
+}
+*/
+/*
+.info-group-products .products-in-group .action-buttons button,
+.info-group-products .search-product .action-buttons button,
+.search-product .action-buttons button{
+	width: 100%;
+}
+*/
+.info-group label.form-check-label:not(:last-child){ margin-right: 10px; }
+
+@media (max-width: 991px){
+	.info-group{ margin-top: 20px; }
+}
+
+@media (max-width: 767px){
+	.info-group-products .search-product{ margin-top: 3px; }
+}
+
+
+/* divisore */
+/*
+.info-group{
+	border-left: 1px;
+	border-left-color: #eee;
+	border-left-style: solid;
+}
+*/
+
+/*pagina product contribution*/
+/*allinea la lista di ricerca a divisioni*/
+/*.division, 
+.info-product-contribution{ margin-top: 10px; }*/
+
+.helper-div{ margin-top: 0px; }

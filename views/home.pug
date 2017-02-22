@@ -1,0 +1,33 @@
+extends base/pageLayout
+
+block pageSidebar
+	p.help-block(style="color: #ccc;")
+		="Benvenuto"
+		br
+		="usa il menù in alto per cominciare la tua esperienza"
+
+block content
+	div.homeTitle.jumbotron
+		h1
+			b S
+			="ales"
+		h1
+			b F
+			="orce"
+		h1
+			b P
+			="ortal"
+		h3.text-right Active Listening and Responding
+
+	p #{dictionary["welcome"]} #{user}
+	p #{dictionary["home_msg"]}
+
+	div.row
+		div.col-sm-6.text-center
+			i.deviceIcon.fa.fa-tablet(style="font-size: 80px;", class=(isMobile)?"selected":"")
+		div.col-sm-6.text-center
+			i.deviceIcon.fa.fa-laptop(style="font-size: 80px;", class=(!isMobile)?"selected":"")
+
+	p(style="margin-top: 20px; ")
+		b #{dictionary["home_advice"]}
+

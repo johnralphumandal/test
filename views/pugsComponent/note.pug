@@ -1,0 +1,19 @@
+mixin customNote(note_array)
+	.helper-div.helper-div-info.bg-info.alert.alert-dismissible.pageNotes(role="alert")
+		button(type="button" class="close" data-dismiss="alert" aria-label="Close")
+			span(aria-hidden="true") &times;
+		each note, index in note_array
+			p #{note}
+
+mixin customNoteH(note_array)
+	.infoBtn
+		span.glyphicon.glyphicon-question-sign
+	.helper-div.bg-info.alert.alert-dismissible.pageNotesH(role="alert")
+		each note, index in note_array
+			p #{note}
+
+
+mixin customNoteNew(note_array)
+	.helper-div.helper-div-info.bg-info.alert.alert-dismissible.pageNotesNew(role="alert")
+		each note, index in note_array
+			p #{note}

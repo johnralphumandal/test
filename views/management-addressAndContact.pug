@@ -1,0 +1,401 @@
+extends base/pageLayout
+
+
+include ./pugsComponent/select_list
+include ./pugsComponent/note
+
+block head 
+	script(src='/javascripts/coreObj/bootstrapModal.js')
+	script(src='/javascripts/coreObj/selectableList.js')
+	script(src='/javascripts/addressAndContactObj.js')
+
+
+block pageSidebar
+	label Utenti
+	div.usersList
+		+searchableSelectableList(usersList, 7)
+
+block content
+	h1= title
+
+	+customNote(notes)
+
+
+	ul.nav.nav-tabs
+		li(role="presentation", class="active", rel="addressContainerTab")
+			a(href="#") Indirizzi
+		li(role="presentation", rel="contactContainerTab")
+			a(href="#") Contatti
+
+	div.tabContainer
+		div#addressContainerTab
+			div.row
+				div.col-sm-4
+					div.form-group
+						label(for="inputDivision_a") Divisione
+						input(type="text" class="form-control input-sm" id="inputDivision_a" placeholder="")
+				div.col-sm-4
+					div.form-group
+						label(for="inputTitolo_a") Titolo
+						input(type="text" class="form-control input-sm" id="inputTitolo_a" placeholder="")
+				div.col-sm-4
+					div.form-group
+						label(for="inputUserID_a") ID Utente
+						input(type="text" class="form-control input-sm" id="inputUserID_a" placeholder="")
+			div.row
+				div.col-sm-4
+					div.form-group
+						label(for="inputSurname_a") Cognome
+						input(type="text" class="form-control input-sm" id="inputSurname_a" placeholder="")
+				div.col-sm-4
+					div.form-group
+						label(for="inputName_a") Nome
+						input(type="text" class="form-control input-sm" id="inputName_a" placeholder="")
+				div.col-sm-4
+					div.form-group
+						label(for="inputMobile_a") Cellulare
+						input(type="text" class="form-control input-sm" id="inputMobile_a" placeholder="")
+
+			hr
+
+			div.panel-group#accordion(role="tablist", aria-multiselectable="true")
+				div.panel.panel-default
+					div#headingOne_a.panel-heading(role="tab")
+						h5.panel-title
+							a(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapseOne_a", aria-expanded="true", aria-controls="collapseOne_a") Magazzino Spedizione
+					div#collapseOne_a.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingOne_a")
+						div.panel-body
+							div.row
+								div.col-xs-12
+									div.form-group
+										label(for="inputDescrWarehouse_a") Descrizione Magazzino
+										input(type="text" class="form-control input-sm" id="inputDescrWarehouse_a" placeholder="")
+							div.row
+								div.col-xs-12
+									div.form-group
+										label(for="inputAddressWarehouse_a") Via
+										input(type="text" class="form-control input-sm" id="inputAddressWarehouse_a" placeholder="")
+							div.row
+								div.col-sm-3
+									div.form-group
+										label(for="inputLocWarehouse_a") Località
+										input(type="text" class="form-control input-sm" id="inputLocWarehouse_a" placeholder="")
+								div.col-sm-3
+									div.form-group
+										label(for="inputCAPWarehouse_a") CAP
+										input(type="text" class="form-control input-sm" id="inputCAPWarehouse_a" placeholder="")
+								div.col-sm-4
+									div.form-group
+										label(for="inputCityWarehouse_a") Città
+										input(type="text" class="form-control input-sm" id="inputCityWarehouse_a" placeholder="")
+								div.col-sm-2
+									div.form-group
+										label(for="inputProv_a") Provincia
+										input(type="text" class="form-control input-sm" id="inputProv_a" placeholder="")
+							div.row
+								div.col-sm-6
+									div.form-group
+										label(for="inputTelephone_a") Telefono
+										input(type="text" class="form-control input-sm" id="inputTelephone_a" placeholder="")
+								div.col-sm-6
+									div.form-group
+										label(for="inputContact_a") Contatto
+										input(type="text" class="form-control input-sm" id="inputContact_a" placeholder="")
+							div.row
+								div.col-xs-12
+									div.form-group
+										label(for="inputNotes_a") Orario (note)
+										input(type="text" class="form-control input-sm" id="inputNotes_a" placeholder="")
+				div.panel.panel-default
+					div#headingTwo_a.panel-heading(role="tab")
+						h5.panel-title
+							a(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapseTwo_a", aria-expanded="true", aria-controls="collapseTwo_a") Consegna Merce 
+					div#collapseTwo_a.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingTwo_a")
+						div.panel-body
+							div.row
+								div.col-sm-6
+									div.form-group
+										label(for="inputAddressMerce_a") Via
+										input(type="text" class="form-control input-sm" id="inputAddressMerce_a" placeholder="")
+								div.col-sm-6
+									div.form-group
+										label(for="inputCOMerce_a") Presso
+										input(type="text" class="form-control input-sm" id="inputCOMerce_a" placeholder="")
+							div.row
+								div.col-sm-3
+									div.form-group
+										label(for="inputLocMerce_a") Località
+										input(type="text" class="form-control input-sm" id="inputLocMerce_a" placeholder="")
+								div.col-sm-3
+									div.form-group
+										label(for="inputCAPMerce_a") CAP
+										input(type="text" class="form-control input-sm" id="inputCAPMerce_a" placeholder="")
+								div.col-sm-4
+									div.form-group
+										label(for="inputCityMerce_a") Città
+										input(type="text" class="form-control input-sm" id="inputCityMerce_a" placeholder="")
+								div.col-sm-2
+									div.form-group
+										label(for="inputProvMerce_a") Provincia
+										select(class="form-control input-sm" id="inputProvMerce_a" placeholder="")
+							div.row
+								div.col-sm-6
+									div.form-group
+										label(for="inputTelephoneMerce_a") Telefono
+										input(type="text" class="form-control input-sm" id="inputTelephoneMerce_a" placeholder="")
+								div.col-sm-6
+									div.form-group
+										label(for="inputFaxMerce_a") Fax
+										input(type="text" class="form-control input-sm" id="inputFaxMerce_a" placeholder="")
+							div.row
+								div.col-xs-12
+									div.form-group
+										label(for="inputNotesMerce_a") Orario (note)
+										input(type="text" class="form-control input-sm" id="inputNotesMerce_a" placeholder="")
+
+				div.panel.panel-default
+					div#headingCorrisp_a.panel-heading(role="tab")
+						h5.panel-title
+							a(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapseCorrisp_a", aria-expanded="true", aria-controls="collapseCorrisp_a") Corrispondenza
+					div#collapseCorrisp_a.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingCorrisp_a")
+						div.panel-body
+							div.row
+								div.col-sm-6
+									div.form-group
+										label(for="inputAddressCorrisp_a") Via
+										input(type="text" class="form-control input-sm" id="inputAddressCorrisp_a" placeholder="")
+								div.col-sm-6
+									div.form-group
+										label(for="inputCOCorrisp_a") Presso
+										input(type="text" class="form-control input-sm" id="inputCOCorrisp_a" placeholder="")
+							div.row
+								div.col-sm-3
+									div.form-group
+										label(for="inputLocCorrisp_a") Località
+										input(type="text" class="form-control input-sm" id="inputLocCorrisp_a" placeholder="")
+								div.col-sm-3
+									div.form-group
+										label(for="inputCAPCorrisp_a") CAP
+										input(type="text" class="form-control input-sm" id="inputCAPCorrisp_a" placeholder="")
+								div.col-sm-4
+									div.form-group
+										label(for="inputCityCorrisp_a") Città
+										input(type="text" class="form-control input-sm" id="inputCityCorrisp_a" placeholder="")
+								div.col-sm-2
+									div.form-group
+										label(for="inputProvCorrisp_a") Provincia
+										input(type="text" class="form-control input-sm" id="inputProvCorrisp_a" placeholder="")
+				div.panel.panel-default
+					div#headingBio_a.panel-heading(role="tab")
+						h5.panel-title
+							a(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapseBio_a", aria-expanded="true", aria-controls="collapseBio_a") Biologici 
+					div#collapseBio_a.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingBio_a")
+						div.panel-body
+							div.row
+								div.col-sm-6
+									div.form-group
+										label(for="inputAddressBio_a") Via
+										input(type="text" class="form-control input-sm" id="inputAddressBio_a" placeholder="")
+								div.col-sm-6
+									div.form-group
+										label(for="inputCOBio_a") Presso
+										input(type="text" class="form-control input-sm" id="inputCOBio_a" placeholder="")
+							div.row
+								div.col-sm-3
+									div.form-group
+										label(for="inputLocBio_a") Località
+										input(type="text" class="form-control input-sm" id="inputLocBio_a" placeholder="")
+								div.col-sm-3
+									div.form-group
+										label(for="inputCAPBio_a") CAP
+										input(type="text" class="form-control input-sm" id="inputCAPBio_a" placeholder="")
+								div.col-sm-4
+									div.form-group
+										label(for="inputCityBio_a") Città
+										input(type="text" class="form-control input-sm" id="inputCityBio_a" placeholder="")
+								div.col-sm-2
+									div.form-group
+										label(for="inputProvBio_a") Provincia
+										input(type="text" class="form-control input-sm" id="inputProvBio_a" placeholder="")
+							div.row
+								div.col-xs-12
+									div.form-group
+										label(for="inputNotesBio_a") Orario (note)
+										input(type="text" class="form-control input-sm" id="inputNotesBio_a" placeholder="")
+			div.row.action-button-group
+				div.col-xs-12.text-right
+					button.btn.btn-sm.btn-success 
+						span.glyphicon.glyphicon-floppy-disk
+						| 
+						=dictionary.save
+
+
+
+		div#contactContainerTab(style="display: none;")
+			div.row
+				div.col-sm-4
+					div.form-group
+						label(for="inputDivision_c") Divisione
+						input(type="text" class="form-control input-sm" id="inputDivision_c" placeholder="")
+				div.col-sm-4
+					div.form-group
+						label(for="inputTitolo_c") Titolo
+						input(type="text" class="form-control input-sm" id="inputTitolo_c" placeholder="")
+				div.col-sm-4
+					div.form-group
+						label(for="inputUserID_c") ID Utente
+						input(type="text" class="form-control input-sm" id="inputUserID_c" placeholder="")
+			div.row
+				div.col-sm-4
+					div.form-group
+						label(for="inputSurname_c") Cognome
+						input(type="text" class="form-control input-sm" id="inputSurname_c" placeholder="")
+				div.col-sm-4
+					div.form-group
+						label(for="inputName_c") Nome
+						input(type="text" class="form-control input-sm" id="inputName_c" placeholder="")
+
+			hr
+
+			div.panel-group#accordion(role="tablist", aria-multiselectable="true")
+				div.panel.panel-default
+					div#headingPhone_c.panel-heading(role="tab")
+						h5.panel-title
+							a(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapsePhone_c", aria-expanded="true", aria-controls="collapsePhone_c") Cellulare
+					div#collapsePhone_c.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingPhone_c")
+						div.panel-body
+							div.row
+								div.col-xs-12
+									div.form-group
+										label(for="inputPhone_c") Cellulare
+										input(type="text" class="form-control input-sm" id="inputPhone_c" placeholder="")
+							div.row
+								div.col-xs-12
+				div.panel.panel-default
+					div#headingShipping_c.panel-heading(role="tab")
+						h5.panel-title
+							a(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapseShipping_c", aria-expanded="true", aria-controls="collapseShipping_c") Magazzino Spedizione
+					div#collapseShipping_c.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingShipping_c")
+						div.panel-body
+							div.row
+								div.col-sm-12
+									div.form-group
+										label(for="inputAddressShipping_c") Descrizione
+										input(type="text" class="form-control input-sm" id="inputAddressShipping_c" placeholder="")
+							div.row
+								div.col-sm-3
+									div.form-group
+										label(for="inputLocShipping_c") Località
+										input(type="text" class="form-control input-sm" id="inputLocShipping_c" placeholder="")
+								div.col-sm-3
+									div.form-group
+										label(for="inputCAPShipping_c") CAP
+										input(type="text" class="form-control input-sm" id="inputCAPShipping_c" placeholder="")
+								div.col-sm-4
+									div.form-group
+										label(for="inputCityShipping_c") Città
+										input(type="text" class="form-control input-sm" id="inputCityShipping_c" placeholder="")
+								div.col-sm-2
+									div.form-group
+										label(for="inputProvShipping_c") Provincia
+										select(class="form-control input-sm" id="inputProvShipping_c" placeholder="")
+							div.row
+								div.col-sm-6
+									div.form-group
+										label(for="inputTelephoneShipping_c") Telefono
+										input(type="text" class="form-control input-sm" id="inputTelephoneShipping_c" placeholder="")
+								div.col-sm-6
+									div.form-group
+										label(for="inputContactShipping_c") Contatto
+										input(type="text" class="form-control input-sm" id="inputContactShipping_c" placeholder="")
+							div.row
+								div.col-xs-12
+									div.form-group
+										label(for="inputNotesShipping_c") Orario (note)
+										input(type="text" class="form-control input-sm" id="inputNotesShipping_c" placeholder="")
+
+				div.panel.panel-default
+					div#headingDelivery_c.panel-heading(role="tab")
+						h5.panel-title
+							a(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapseDelivery_c", aria-expanded="true", aria-controls="collapseDelivery_c") Indirizzo Consegna Merce
+					div#collapseDelivery_c.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingDelivery_c")
+						div.panel-body
+							div.row
+								div.col-sm-6
+									div.form-group
+										label(for="inputAddressDelivery_c") Via
+										input(type="text" class="form-control input-sm" id="inputAddressDelivery_c" placeholder="")
+								div.col-sm-6
+									div.form-group
+										label(for="inputCODelivery_c") Presso
+										input(type="text" class="form-control input-sm" id="inputCODelivery_c" placeholder="")
+							div.row
+								div.col-sm-3
+									div.form-group
+										label(for="inputLocDelivery_c") Località
+										input(type="text" class="form-control input-sm" id="inputLocDelivery_c" placeholder="")
+								div.col-sm-3
+									div.form-group
+										label(for="inputCAPDelivery_c") CAP
+										input(type="text" class="form-control input-sm" id="inputCAPDelivery_c" placeholder="")
+								div.col-sm-4
+									div.form-group
+										label(for="inputCityDelivery_c") Città
+										input(type="text" class="form-control input-sm" id="inputCityDelivery_c" placeholder="")
+								div.col-sm-2
+									div.form-group
+										label(for="inputProvDelivery_c") Provincia
+										input(type="text" class="form-control input-sm" id="inputProvDelivery_c" placeholder="")
+							div.row
+								div.col-sm-6
+									div.form-group
+										label(for="inputTelephoneDelivery_c") Telefono
+										input(type="text" class="form-control input-sm" id="inputTelephoneDelivery_c" placeholder="")
+								div.col-sm-6
+									div.form-group
+										label(for="inputFaxDelivery_c") Fax
+										input(type="text" class="form-control input-sm" id="inputFaxDelivery_c" placeholder="")
+							div.row
+								div.col-xs-12
+									div.form-group
+										label(for="inputNotesDelivery_c") Orario (note)
+										input(type="text" class="form-control input-sm" id="inputNotesDelivery_c" placeholder="")
+				div.panel.panel-default
+					div#headingCorrisp_c.panel-heading(role="tab")
+						h5.panel-title
+							a(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapseCorrisp_c", aria-expanded="true", aria-controls="collapseCorrisp_c") Corrispondenza
+					div#collapseCorrisp_c.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingCorrisp_c")
+						div.panel-body
+							div.row
+								div.col-sm-6
+									div.form-group
+										label(for="inputAddressCorrisp_c") Via
+										input(type="text" class="form-control input-sm" id="inputAddressCorrisp_c" placeholder="")
+								div.col-sm-6
+									div.form-group
+										label(for="inputCOCorrisp_c") Presso
+										input(type="text" class="form-control input-sm" id="inputCOCorrisp_c" placeholder="")
+							div.row
+								div.col-sm-3
+									div.form-group
+										label(for="inputLocCorrisp_c") Località
+										input(type="text" class="form-control input-sm" id="inputLocCorrisp_c" placeholder="")
+								div.col-sm-3
+									div.form-group
+										label(for="inputCAPCorrisp_c") CAP
+										input(type="text" class="form-control input-sm" id="inputCAPCorrisp_c" placeholder="")
+								div.col-sm-4
+									div.form-group
+										label(for="inputCityCorrisp_c") Città
+										input(type="text" class="form-control input-sm" id="inputCityCorrisp_c" placeholder="")
+								div.col-sm-2
+									div.form-group
+										label(for="inputProvCorrisp_c") Provincia
+										input(type="text" class="form-control input-sm" id="inputProvCorrisp_c" placeholder="")
+			div.row.action-button-group
+				div.col-xs-12.text-right
+					button.btn.btn-sm.btn-success 
+						span.glyphicon.glyphicon-floppy-disk
+						| 
+						=dictionary.save
+

@@ -1,0 +1,760 @@
+{
+	"header": [
+		{
+			"columns":[
+				{
+					
+					"attributes": { 
+						"colspan": 5,
+						"rel": "monthly"
+					},
+					"content": {
+						"type": "text", 
+						"value": "Monthly"
+					}
+				},
+				{
+					"attributes": {
+						"rowspan": 1,
+						"colspan": 1,
+						"rel": "elaborate",
+						"class": "text-center"
+					},
+					"content": {
+						"type": "text", 
+						"value": "Elabora"
+					}
+				}
+			]
+		},
+		{
+			"columns":[
+				{
+					"attributes": {
+						"rowspan": 1,
+						"colspan": 1,
+						"rel": "divisions"
+					},
+					"content": {
+						"type": "text", 
+						"value": "Divisioni"
+					}
+				},
+				{
+					"attributes": {
+						"rowspan": 1,
+						"colspan": 1,
+						"rel": "lastElaboration"
+					},
+					"content": {
+						"type": "text", 
+						"value": "Ultima elaborazione"
+					}
+				},
+				{
+					"attributes": {
+						"rowspan": 1,
+						"colspan": 1,
+						"rel": "year",
+						"class": "text-center"
+					},
+					"content": {
+						"value": "Anno"
+					}
+				},
+				{
+					"attributes": {
+						"rowspan": 1,
+						"colspan": 1,
+						"rel": "month",
+						"class": "text-center"
+					},
+					"content": {
+						"value": "Mese"
+					}
+				},
+				{
+					"attributes": {
+						"rowspan": 1,
+						"colspan": 1,
+						"rel": "publicated",
+						"class": "text-center btn-group-container"
+					},
+					"content": {
+						"value": "Pubblicato"
+					}
+				},
+				{
+					"attributes": {
+						"rowspan": 1,
+						"colspan": 1,
+						"rel": "elaborated",
+						"class": "text-center"
+					},
+					"content": {
+						"type": "checkbox",
+						"value": ""
+					}
+				}
+			]
+		}
+	],
+	"data": [
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-ACCMAN"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-BANTING 2011"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-BEST-2011"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-BONE"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-CARDIOLOGY"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-CARDIOPVASCULAR"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-CCARE 2011"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-CNS"
+					}
+				},
+				{
+					"content": {
+						"value": "04/12/2016 07:31:16"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-DUL"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-HOSPITAL 2011"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-NEUDE 2011"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-ONCOLOGY"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-PEDIATRIC"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-TERRANOVA 2011"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-TESTDEMA"
+					}
+				},
+				{
+					"content": {
+						"value": "*** Nuova ***"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{
+					"content": {
+						"value": "IT-ZYPADHERA"
+					}
+				},
+				{
+					"content": {
+						"value": "17/03/2016 14:31:54"
+					}
+				},
+				{
+					"content": {
+						"value": "2014"
+					}
+				},
+				{
+					"content": {
+						"value": "11"
+					}
+				},
+				{
+					"attributes":{"class":"text-center"},
+					"content": {
+						"type":"button-group",
+						"elements": [
+							{"attributes": {"class":"active"}, "value": "si", "text": "Si"},
+							{"value": "no", "text": "No"}
+						]
+					}
+				},
+				{
+					"attributes": { "class": "text-center" },
+					"content": {
+						"type": "checkbox", 
+						"value": ""
+					}
+				}
+			]
+		}
+	]
+}

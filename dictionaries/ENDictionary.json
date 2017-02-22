@@ -1,0 +1,27 @@
+{
+	"description": "Description",
+	"delete": "Delete",
+	"division": "Division",
+	"divisions": "Divisions",
+	"home_msg": "This page permits to login through Lilly Semplified Sign-On Password ",
+	"home_advice": "Informations contained in this website are considerabled",
+	"home_advice": "Tutte le informazioni contenute in questo sito sono da considerarsi confidenziali e sono disponibili per il personale Eli Lilly Italia S.p.A. ed eventuale personale esterno autorizzato",
+	"market": "Mercato",
+	"name": "Nome",
+	"or": "oppure",
+	"product": "Prodotto",
+	"product_contribution": "Contributo del Prodotto",
+	"product_type": "Tipo prodotto",
+	"products": "Prodotti",
+	"profile": "Profilo",
+	"prositions": "Posizioni",
+	"save": "Salva",
+	"surname": "Cognome",
+	"value": "Valore",
+	"welcome": "Benvenuto",
+
+
+
+	"phrase": "La ricerca può essere effettuata per",
+	"phrase2": "Select one option from menu on the left to view the report's distribution of the current category"
+}

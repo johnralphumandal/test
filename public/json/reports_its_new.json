@@ -1,0 +1,235 @@
+{
+	"header": [
+		{
+			"columns":[
+				{
+					
+					"attributes":{
+						"rowspan": 2,
+						"rel": "divisions",
+						"class":"text-center"
+					},
+					"content": {
+						"value": "Divisioni"
+					}
+				},
+				{
+					
+					"attributes":{
+						"rowspan": 2,
+						"rel": "market",
+						"class":"text-center"
+					},
+					"content": {
+						"value": "Mercato"
+					}
+				},
+				{
+					
+					"attributes":{
+						"colspan": 3,
+						"rel": "lastElaboration",
+						"class":"text-center"
+					},
+					"content": {
+						"value": "Ultima Elaborazione"
+					}
+				},
+				{
+					"attributes":{
+						"colspan": 3,
+						"rel": "launchParameters",
+						"class":"text-center"
+					},
+					"content": {
+						"value": "Parametri di lancio"
+					}
+				},
+				{
+					"attributes":{
+						"rowspan": 2,
+						"rel": "elaboration",
+						"class":"text-center"
+					},
+					"content": {
+						"value": "Elaborazione"
+					}
+				}
+			]
+		},
+		{
+			"columns":[
+				{
+					"attributes": {"rel": "divisions"},
+					"content": {
+						"value": "Data"
+					}
+				},
+				{
+					"attributes": {"rel": "lastElaboration"},
+					"content": {
+						"value": "Anno"
+					}
+				},
+				{
+					"attributes": {"rel": "lastElaboration"},
+					"content": {
+						"value": "Mese"
+					}
+				},
+				{
+					"attributes": {"rel": "divisions"},
+					"content": {
+						"value": "Anno"
+					}
+				},
+				{
+					"attributes": {"rel": "lastElaboration"},
+					"content": {
+						"value": "Mese"
+					}
+				},
+				{
+					"attributes": {"rel": "lastElaboration"},
+					"content": {
+						"value": "Opzioni"
+					}
+				}
+			]
+		}
+	],
+	"data": [
+		{
+			"columns": [
+				{"content": {"value": "IT-ACCMAN"}}, 
+				{"content": {"value": "Mercato ADP Antiaggregante Piastrinico"}}, 
+				{"content": {"value": "2013-11-30 00:00"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "null"}},
+				{
+					"content": {
+						"type":"button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-cloud-upload pull-right", "title": "to publish"}},
+							{"attributes": {"class": "fa fa-2x fa-pencil-square-o pull-right", "title": "to elaborate"}},
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "to publish"}}
+						]
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{"content": {"value": "IT-ACCMAN"}}, 
+				{"content": {"value": "Mercato ADP Antiaggregante Piastrinico"}}, 
+				{"content": {"value": "2013-11-30 00:00"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "null"}},
+				{
+					"content": {
+						"type":"button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-cloud-upload pull-right", "title": "to publish"}},
+							{"attributes": {"class": "fa fa-2x fa-pencil-square-o pull-right", "title": "to elaborate"}},
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "to publish"}}
+						]
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{"content": {"value": "IT-ACCMAN"}}, 
+				{"content": {"value": "Mercato ADP Antiaggregante Piastrinico"}}, 
+				{"content": {"value": "2013-11-30 00:00"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "null"}},
+				{
+					"content": {
+						"type":"button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-cloud-upload pull-right", "title": "to publish"}},
+							{"attributes": {"class": "fa fa-2x fa-pencil-square-o pull-right", "title": "to elaborate"}},
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "to publish"}}
+						]
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{"content": {"value": "IT-ACCMAN"}}, 
+				{"content": {"value": "Mercato ADP Antiaggregante Piastrinico"}}, 
+				{"content": {"value": "2013-11-30 00:00"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "null"}},
+				{
+					"content": {
+						"type":"button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-cloud-upload pull-right", "title": "to publish"}},
+							{"attributes": {"class": "fa fa-2x fa-pencil-square-o pull-right", "title": "to elaborate"}},
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "to publish"}}
+						]
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{"content": {"value": "IT-ACCMAN"}}, 
+				{"content": {"value": "Mercato ADP Antiaggregante Piastrinico"}}, 
+				{"content": {"value": "2013-11-30 00:00"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "null"}},
+				{
+					"content": {
+						"type":"button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-cloud-upload pull-right", "title": "to publish"}},
+							{"attributes": {"class": "fa fa-2x fa-pencil-square-o pull-right", "title": "to elaborate"}},
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "to publish"}}
+						]
+					}
+				}
+			]
+		},
+		{
+			"columns": [
+				{"content": {"value": "IT-ACCMAN"}}, 
+				{"content": {"value": "Mercato ADP Antiaggregante Piastrinico"}}, 
+				{"content": {"value": "2013-11-30 00:00"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "2012"}},
+				{"content": {"value": "2"}},
+				{"content": {"value": "null"}},
+				{
+					"content": {
+						"type":"button-icon-group",
+						"elements": [
+							{"attributes": {"class": "fa fa-2x fa-cloud-upload pull-right", "title": "to publish"}},
+							{"attributes": {"class": "fa fa-2x fa-pencil-square-o pull-right", "title": "to elaborate"}},
+							{"attributes": {"class": "fa fa-2x fa-eye pull-right", "title": "to publish"}}
+						]
+					}
+				}
+			]
+		}
+	]
+}

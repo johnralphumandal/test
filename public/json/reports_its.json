@@ -1,0 +1,62 @@
+{
+	"options": {
+		"isPreviewable": true,
+		"isEditable": true
+	},
+	"struct_data": [
+		{
+			"divisione": "IT-ACCMAN",
+			"mercato": "Mercato ADP Antiaggregante Piastrinico",
+			"ultima_elaborazione": {
+				"data": "2013-11-30 00:00",
+				"anno": 2012,
+				"mese": 2
+			}
+		},
+		{
+			"divisione": "IT-ACCMAN",
+			"mercato": "Mercato Antidepressivi",
+			"ultima_elaborazione": {
+				"data": "2013-11-30 00:00",
+				"anno": 2012,
+				"mese": 1
+			}
+		},
+		{
+			"divisione": "IT-ACCMAN",
+			"mercato": "Mercato Growth Hormone",
+			"ultima_elaborazione": {
+				"data": "2013-10-02 00:00",
+				"anno": 2013,
+				"mese": 8
+			}
+		},
+		{
+			"divisione": "IT-BANTING 2011",
+			"mercato": "Mercato Cardio",
+			"ultima_elaborazione": {
+				"data": "*** Nuova ***",
+				"anno": 2011,
+				"mese": 2
+			}
+		},
+		{
+			"divisione": "IT-ACCMAN",
+			"mercato": "Mercato ADP Antiaggregante Piastrinico",
+			"ultima_elaborazione": {
+				"data": "2013-11-30 00:00",
+				"anno": 2012,
+				"mese": 2
+			}
+		},
+		{
+			"divisione": "IT-ACCMAN",
+			"mercato": "Mercato ADP Antiaggregante Piastrinico",
+			"ultima_elaborazione": {
+				"data": "2013-11-30 00:00",
+				"anno": 2012,
+				"mese": 2
+			}
+		}
+	]
+}

@@ -1,0 +1,48 @@
+extends base/pageLayout
+include ./pugsComponent/select_list
+include ./pugsComponent/note
+
+block head
+	script(src='/javascripts/coreObj/bootstrapModal.js')
+	//- script(src='/javascripts/coreObj/searchProduct.js')
+	script(src='/javascripts/coreObj/selectableList.js')
+	script(src='/javascripts/productsCodeMatchObj.js')
+
+	link("rel"="stylesheet", "href"="/stylesheets/products.css")
+
+block pageSidebar
+	.products-list
+		label #{dictionary.level_3_products}
+		+searchableSelectableList(product_list, 10)
+	
+		div(style="margin-top: 20px;")
+			button.btn.btn-sm.btn-success.btnShowResult(style="width: 100%;") Visualizza
+
+
+block content
+	.pageTitleContainer
+		h1.pageTitle= title
+		.infoBtn
+			span.glyphicon.glyphicon-question-sign
+	+customNoteNew(notes)
+
+
+	.searchContainer(style="display: none;")
+		h4.itemSelected
+			a(href="#")
+		.row
+			//-
+				.col-sm-3.products-list
+					+searchableSelectableList(product_list, 10)
+			.col-sm-12.info-group.info-product-contribution
+				.form-group
+					label #{dictionary.product} OneLilly
+					input.input-sm.form-control("type"="text", value="Mockup")
+				.form-group
+					label #{dictionary.product} MS
+					input.input-sm.form-control("type"="text", value="Mockup")
+				.row.action-button-group
+					.col-xs-12.text-right
+						button#btnSaveModification.btn.btn-success.btn-sm 
+							span.glyphicon.glyphicon-floppy-disk
+							|  #{dictionary.save}

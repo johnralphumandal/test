@@ -1,0 +1,18 @@
+table.table-custom thead > tr > th{	vertical-align: middle; }
+/*
+table.table-custom th > input[type="checkbox"],
+table.table-custom td > input[type="checkbox"]{
+    margin: 0px;
+}
+*/
+
+.table-custom > thead > tr.info > th{ background-color: #81c8fb !important; }
+.table-custom > tbody > tr.align-middle td{ vertical-align: middle; }
+
+.table-custom > thead > tr > th.btn-group-container{ width: 87px; }
+.table-custom > tbody > tr { background: #fff; }
+
+.table-custom > tbody > tr > td .input-group span{ top: 0px; }
+
+.table-custom[rel="daily"] > tbody > tr > th { background: #dff0d8;}
+.table-custom[rel="daily"] > tbody > tr > td { background: #d9edf7;}

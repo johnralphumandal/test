@@ -1,0 +1,37 @@
+extends base/pageLayout
+include ./pugsComponent/report_table
+include ./pugsComponent/note.pug
+
+block head
+	link("rel"="stylesheet", "href"="/stylesheets/report-table.css")
+	script(src='/javascripts/reportManagement-parameters.js')
+
+block content
+	h1= title
+	+customNote(notes)
+	div.row
+		div.col-sm-12
+			ul.nav.nav-tabs
+				li(role="presentation", rel="cvpContainerTab"): a(href="#") #{dictionary.cvp_qta_val}
+				li(role="presentation" rel="dailyContainerTab"): a(href="#") #{dictionary.daily_qta_dot_val}
+				li(role="presentation" rel="monthlySalesContainerTab"): a(href="#") #{dictionary.monthly_direct_sales}
+				li(role="presentation" rel="trendContainerTab"): a(href="#") #{dictionary.trend_direct_sales}
+			div.tabContainer
+				div#cvpContainerTab(style="display:none")
+					+genericDataTable(reports_cvp)
+				div#dailyContainerTab(style="display:none")
+					table.table.table-bordered.table-responsive.table-stripped.table-custom("rel"="daily")
+						tr
+							th Frequenza
+							td Daily
+						tr
+							th Visibilità automatica (Report inizio tramite mail)
+							td Yes
+						tr
+							th Elaborato
+							td 17/03/2016 14:31:54
+
+				div#monthlySalesContainerTab(style="display:none")
+					+genericDataTable(reports_monthly)
+				div#trendContainerTab(style="display:none")
+					+genericDataTable(reports_trend)

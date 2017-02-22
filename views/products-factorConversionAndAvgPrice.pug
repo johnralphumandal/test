@@ -1,0 +1,55 @@
+extends base/pageLayout
+include ./pugsComponent/select_list
+
+include ./pugsComponent/note
+
+block head 
+	script(src='/javascripts/coreObj/bootstrapModal.js')
+	script(src='/javascripts/coreObj/selectableList.js')
+	script(src='/javascripts/coreObj/bAlert.js')
+	script(src='/javascripts/productsFactorConversionAndAvgPriceObj.js')
+
+block pageSidebar
+	label Package (Livello 5)
+	div.product-list
+		+searchableSelectableList(result_list, 5)
+	div(style="margin-top: 20px;")
+		button.btn.btn-sm.btn-success.btn-show-result(style="width: 100%;") #{dictionary.view}
+
+block content
+	.pageTitleContainer
+		h1.pageTitle= title
+		.infoBtn
+			span.glyphicon.glyphicon-question-sign
+	+customNoteNew(notes)
+
+	.searchContainer(style="display: none;")
+		h4.itemSelected
+			a(href="#") IT-VL7510001T - HUMALOG 100U/ML 1 FLACONE PUB
+		div.row
+			div.col-sm-12.col-md-6.col-lg-6
+				div.form-group
+					label(for="input-value") #{dictionary.values}
+					input(type="text" class="form-control input-sm" id="input-value" placeholder="" value="1000.00000")
+			div.col-sm-12.col-md-6.col-lg-6
+				div.form-group
+					label(for="input-unit-of-measure") #{dictionary.units_of_measurement}
+					select.form-control.input-sm
+						option UI
+						option DOT
+						option GR
+						option VIALS
+			div.col-sm-12.col-md-6.col-lg-6
+				div.form-group
+					label(for="input-avg-price") #{dictionary.average_euro_price}
+					input(type="text" class="form-control input-sm" id="input-avg-price" placeholder="" value="0.01908")
+			div.col-sm-12.col-md-6.col-lg-6
+				div.form-group
+					label(for="input-price") #{dictionary.effective_price}
+					input(type="text" class="form-control input-sm" id="input-price" placeholder="" value="0.01908")
+			
+		div.row.action-button-group
+			.col-sm-12.text-right
+				button.btn.btn-success.btn-sm.btn-save 
+					span.glyphicon.glyphicon-floppy-disk
+					|  #{dictionary.save}

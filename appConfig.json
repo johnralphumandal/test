@@ -1,0 +1,5 @@
+{
+	"location": "http://testolino-testolino.paas-poc.am.lilly.com/",
+	"testLocation": "http://localhost:3000/",
+	"test": true
+}

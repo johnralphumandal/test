@@ -1,0 +1,62 @@
+mixin menuVoice(voice)
+	- var attributes = {};
+	- if (voice.subMenu !== undefined){
+		- attributes = { 'class': "dropdown-toggle", "data-toggle": "dropdown", "role":"button", "aria-haspopup": "true", "aria-expanded": "false"};
+	- }
+	a(href=((voice.url !== undefined)?voice.url:"#"))&attributes(attributes)
+		- if (voice.iconClass !== undefined){
+			span(class=voice.iconClass)
+			| &nbsp;
+			-// | &nbsp;
+		- }
+		= voice.label
+		- if (voice.subMenu !== undefined){
+			span.caret
+		- }
+
+
+mixin navbar(voices)
+	nav(class='navbar navbar-default navbar-fixed-top redLilly')
+		div(class="container-fluid")
+			div(class="navbar-header")
+				button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1", aria-expanded="false")
+					span(class="sr-only") Toggle navigation
+					span(class="icon-bar")
+					span(class="icon-bar")
+					span(class="icon-bar")
+				a.navbar-brand(href="#", style="padding: 0px;")
+					img(src=(siteURL + "images/Eli_Lilly_logo.png"), style="height:100%;")
+			div(class="collapse navbar-collapse", id="bs-example-navbar-collapse-1")
+				ul(class="nav navbar-nav")
+					- for (var i=0;i<voices.length; i++){
+						li( class= ((voices[i].isActive)? "active":"")+( (voices[i].subMenu === undefined)?"":" dropdown" ) )
+							+menuVoice(voices[i])
+							- if (voices[i].subMenu !== undefined){
+								ul.dropdown-menu
+									- for (var j = 0; j < voices[i].subMenu.length; j++) {
+										li( class= ((voices[i].subMenu[j].isActive)? "active":"") )
+											+menuVoice(voices[i].subMenu[j])
+									- }
+
+							- }
+
+					- }
+				ul.nav.navbar-nav.navbar-right
+					li
+						a(href="#", class="dropdown-toggle", "data-toggle"= "dropdown", "role"= "button", "aria-haspopup"=  "true", "aria-expanded"= "false") 
+							span.glyphicon.glyphicon-user
+							span.caret
+						ul.dropdown-menu
+							li.profileNav
+								a
+									table.table
+										tr
+											td
+												p Francesco Russo
+												span.profileDescr profilo
+											td
+												img.pull-right(src=(siteURL + "images/flags/i-round.png"), style="width: 24px; ")
+									p.text-right.fontChooser
+										span.glyphicon.glyphicon-font(rel="fontSmall")
+										span.glyphicon.glyphicon-font(rel="fontMedium")
+										span.glyphicon.glyphicon-font(rel="fontBig")

@@ -1,0 +1,58 @@
+extends base/pageLayout
+
+block head 
+	script(src='/javascripts/coreObj/bootstrapModal.js')
+	script(src='/javascripts/usersObj.js')
+
+block pageSidebar
+	p.help-block(style="color: #ccc;")
+		="Puoi accedere al livello successivo clickando su ciascuna riga"
+
+
+block content
+	h1= title
+	div.tableLevelsContainer
+		div.tableLevel
+			label Livello 1
+			div.table-responsive
+				table.productsTable.table.table-striped.table-bordered.table-hover.table-sm(rel="lv1")
+					thead
+						tr
+							th Codice
+							th Descr
+							th Livello
+							th Tipo
+							th Stato
+							th.editProduct Modifica
+							th.chartControllers
+							th.advancedControllers
+					tbody
+						- for (var u = 0; u < products.length; u++ ){
+							tr
+								td #{products[u].code}
+								td #{products[u].descr}
+								td #{products[u].lv}
+								td #{products[u].type}
+								td #{products[u].status}
+								td.text-center.editProduct 
+									button.btn.btn-default.btn-xs
+										span.glyphicon.glyphicon-edit
+								td.chartControllers
+									div.semaphore.semaphore-0
+								td.advancedControllers
+									button.btn.btn-xs.btn-default
+										span.glyphicon.glyphicon-link
+									//-
+										ul.dropdown-menu
+											li
+												a(href="#") Action 1
+											li
+												a(href="#") Action 2
+
+						- }
+
+	.row.action-button-group
+		.col-xs-12.text-right
+			button#btn_addProduct.btn.btn-success.btn-sm 
+				span.glyphicon.glyphicon-plus
+				span= " Nuovo"

@@ -1,0 +1,37 @@
+extends base/pageLayout
+
+block content
+	h1= title
+	h4 Variabili di Sessione
+	div.row
+		div.col-sm-4
+			div.form-group
+				label(for="input_userID") User ID
+				input(type="text" class="form-control input-sm" id="input_userID" placeholder="")
+		div.col-sm-4
+			div.form-group
+				label(for="inputFirstname") Nome
+				input(type="text" class="form-control input-sm" id="inputFirstname" placeholder="")
+		div.col-sm-4
+			div.form-group
+				label(for="inputLastname") Cognome
+				input(type="text" class="form-control input-sm" id="inputLastname" placeholder="")
+	div.row
+		div.col-sm-4
+			div.form-group
+				label(for="inputProfileName") Profilo
+				input(type="text" class="form-control input-sm" id="inputProfileName" placeholder="")
+		div.col-sm-4
+			div.form-group
+				label(for="inputGlobalID") Global ID
+				input(type="text" class="form-control input-sm" id="inputGlobalID" placeholder="")
+	hr
+	h4 Nuova Identità
+	div.row
+		div.col-sm-6
+			div.form-group
+				label(for="inputNewXF") Nuovo XF
+				div.input-group
+					input(type="text" class="form-control input-sm" id="inputNewXF" placeholder="")
+					span.input-group-btn
+						button.btn.btn-sm.btn-success Rinnova

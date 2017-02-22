@@ -1,0 +1,17 @@
+mixin sidebar(sidebarConf)
+	div.customSidebar(
+		class= (sidebarConf.isVisible === true)? (sidebarConf.isBlocked === true)?"open lockedSidebar":"open":""
+	)
+		div.customSidebar-body
+			.customSidebar-icon
+				span.glyphicon.glyphicon-th-list
+
+			block pageSidebar
+
+			div.checkbox
+				label
+					- var attr = {type: "checkbox"};
+					- if (sidebarConf.isBlocked)
+						- attr["checked"] = "true";
+					input.lockSidebar&attributes(attr)
+					=" Blocca barra"

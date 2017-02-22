@@ -1,0 +1,21 @@
+
+mixin selectableList(voices, rows, searchable)
+	-var list_height = 31*rows-(rows+1);
+	.list-container(
+		style={"height":list_height+"px"},
+		class=(searchable)?"searchable-list":""
+		)
+		ul.list-group.noselect
+			each value, index in voices
+				li.list-group-item(data-value=value.id title=value.name)
+					= value.name
+					- if (value.canDelete)
+						span.pull-right.glyphicon.glyphicon-trash
+
+mixin searchableSelectableList(voices, rows)
+	.input-group.searchable-list-filter
+		span.input-group-addon
+			span.glyphicon.glyphicon-search
+		input.input-sm(type="text", class="form-control", placeholder="Ricerca...")
+
+	+selectableList(voices, rows, true)

@@ -1,0 +1,81 @@
+extends base/pageLayout
+include ./pugsComponent/select_list
+include ./pugsComponent/note
+
+block head
+	script(src='/javascripts/coreObj/bootstrapModal.js')
+	//- script(src='/javascripts/coreObj/searchProduct.js')
+	script(src='/javascripts/coreObj/selectableList.js')
+	script(src='/javascripts/productsMacroGroupObj.js')
+
+	link("rel"="stylesheet", "href"="/stylesheets/products.css")
+	
+block pageSidebar
+	.groups-product-list
+		label #{dictionary.groups}
+		+searchableSelectableList(group_list, 9)
+	
+		div.row(style="margin-top: 20px;")
+			.col-sm-6
+				button.btn.btn-sm.btn-default.btnNewGroup(style="width: 100%;") Nuovo gruppo
+			.col-sm-6
+				button.btn.btn-sm.btn-success.btnShowResult(style="width: 100%;") Visualizza
+
+
+block content
+	.pageTitleContainer
+		h1.pageTitle= title
+		.infoBtn
+			span.glyphicon.glyphicon-question-sign
+	+customNoteNew(notes)
+
+
+	.row
+		.searchContainer(style="display: none;")
+			.col-md-12.info-group
+				.row.info-group-detail
+					.col-sm-6
+						.form-group(class=(group_editable===true)?"hidden":"")
+							label Gruppo
+							input.info-group-name.input-sm.form-control("type"="text", "value"="")
+
+						h4.itemSelected(class=(!group_editable===true)?"hidden":"")
+							a.info-group-name(href="#")
+					-if(its==true){
+						.col-sm-6.form-group
+							label Tipo:
+								#group_type_input.btn-group.btn-group-justified(role="group", "aria-label"="true", name="")
+									a.btn.btn-default.btn-sm.active("href"="#", "role"="button") Lilly
+									a.btn.btn-default.btn-sm("href"="#", "role"="button") Competitor 
+										
+					-}
+				
+				hr
+				.row.info-group-products
+					.col-sm-6.products-in-group
+						label Prodotti nel gruppo
+						.products-in-group-list
+							+searchableSelectableList(product_list, 7)
+
+						.action-buttons
+							button#btnRemoveProd.btn.btn-sm.btn-default.searchable-list_btn
+								i.glyphicon.glyphicon-trash("aria-hidden"="true")
+								= " Elimina prodotto"
+
+					.col-sm-6.search-product
+						label Prodotti disponibili
+						.search-product-list
+							+searchableSelectableList(product_list, 7)
+
+						.action-buttons
+							button#btnAddProd.btn.btn-sm.btn-default.searchable-list_btn
+								i.glyphicon.glyphicon-plus("aria-hidden"="true")
+								= " Aggiungi prodotto"
+				.row.action-button-group
+					.col-sm-12.text-right
+						button#btnRemoveGroup.btn.btn-sm.btn-danger
+								i.glyphicon.glyphicon-trash("aria-hidden"="true")
+								= " Elimina Gruppo"
+						button#btnSaveModification.btn.btn-success.btn-sm 
+							span.glyphicon.glyphicon-floppy-disk
+							|  #{dictionary.save}

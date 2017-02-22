@@ -1,0 +1,22 @@
+extends base/layout
+
+block content
+	p.text-center 
+		div.panel.panel-default.panel-logIn
+			div.panel-body
+				p.help-block.text-center Accedi a 
+					b SFP 
+					="con il tuo Account"
+				div.loginImgContainer.text-center
+					img(src="images/Eli_Lilly_txtlogo.png")
+				div.form-group
+					label(for="inputUsername") Username
+					input(type="text" class="form-control" id="inputUsername" placeholder="Username")
+				div.form-group
+					label(for="inputPassword") Password
+					input(type="email" class="form-control" id="inputPassword" placeholder="Password")
+				p.danger.wrongAccess_msg 
+				p.text-center
+					button.btn.btn-success.btn-login Log In
+				p.text-center 
+					a.loginAccessDenied(href="#") Non riesco ad accedere con il mio account

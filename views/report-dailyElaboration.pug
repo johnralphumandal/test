@@ -1,0 +1,20 @@
+extends base/pageLayout
+include ./pugsComponent/report_table
+
+block head
+	link("rel"="stylesheet", "href"="/stylesheets/report-table.css")
+	script(src='/javascripts/daily-elaboration.js')
+	
+block content
+	h1.page-title
+		= title
+	
+	.row
+		.col-sm-12
+			+genericDataTable(reports)
+
+		.action-button-group
+			.col-xs-12.text-right
+				button.btn.btn-success.btn-sm 
+					span.glyphicon.glyphicon-floppy-disk
+					|  #{dictionary.save}
